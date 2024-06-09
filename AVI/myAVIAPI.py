@@ -1,6 +1,6 @@
 #-------------------------------------------------------------------------------
 # Name:           Pankaj Verma
-# Description:    Collect all Security Policies
+# Description:    Collect information of VS in VMware AVI 
 #-------------------------------------------------------------------------------
 import requests, json, re, sys
 import requests.packages
