@@ -12,7 +12,8 @@ Options:
   -p, --password TEXT     [required]
   --help                  Show this message and exit.
 
-C:\>python eAVI.py -v  IPADDRESS_AVI -u username, password: ""
+C:\>python eAVI.py -v  AVI+MGMT+IP -u username, password: ""
 
 This file(eAVI.py) is a wrapper around myAVIAPI.py.
 
+for prerequisite  check requirements.txt
