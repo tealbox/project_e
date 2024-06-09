@@ -10,10 +10,6 @@ from myAVIAPI import *
 @click.option("--username", '-u', prompt="AVI Username", default='admin', required=True)
 @click.option("--password", '-p', prompt="Password", hide_input=True, required=True)
 def cli(avihostname, username, password):
-    splistfile = f"{avihostname}_splist_{filetime}.pickle"
-    spgrpsFile = f"{avihostname}_spgrps_{filetime}.txt"
-    sprulesFile = f"{avihostname}_rules_{filetime}.txt"
-
     avi47 = myAVI(avihostname,username = username, password = password)
     avi47.login()
 
