@@ -37,7 +37,6 @@ class myNSX:
           'Content-Type': "application/json",
           'Accept': 'application/json',
           'Connection': 'keep-alive',
-          # 'Authorization': "Basic dnBhbmthajpCbHVlYmVycnkjMTQyMjA="
           'Authorization': f'Basic {cred}'
         }
         # Define the retry strategy
@@ -232,7 +231,6 @@ def rulePrint(rule, fields, sep="#"):
 
 def getSPAll(msxhost, splistfile=None, spgrpsFile=None):
     counter = 1
-    # file = r"C:\work\emerson\10.40.1.31_allgrps_Apr_25_17_14_19.csv"
     lines = readGrp(splistfile)
 ##    spgrpsFile = f"{msxhost.hostname}_spgrps_{filetime}.txt"
     recordFile = open(spgrpsFile, "w")
@@ -268,7 +266,6 @@ def getSPRules_ORG(msxhost, rulesFile=None,):
 
 def getSP(msxhost, file=None,):
     counter = 1
-    # file = r"C:\work\emerson\10.40.1.31_allgrps_Apr_25_17_14_19.csv"
     lines = readGrp(file)
     rulesFile = f"{msxhost.hostname}_rules_{filetime}.txt"
     recordFile = open(rulesFile, "w")
@@ -287,7 +284,6 @@ def getSP(msxhost, file=None,):
 
 def getRulesORG(msxhost, file=None,):
     counter = 1
-    # file = r"C:\work\emerson\10.40.1.31_allgrps_Apr_25_17_14_19.csv"
     lines = readGrp(file)
     rulesFile = f"{msxhost.hostname}_rules_{filetime}.txt"
     recordFile = open(rulesFile, "w")
@@ -342,7 +338,6 @@ def createSPList(nsx, filename, sep="#", counter=0):
 
 
 def getSPRules(msxhost, spgrpsFile=None,sprulesFile=None):
-##    spgrpsFile = r"C:\work\emerson\10.40.17.31_spgrps_Apr_27_17_32_02.txt"
     # sprulesFile = f"{nsxhostname}_rules_{filetime}.txt"
     ruleslist = []
     prefix = 'cas-'
@@ -373,7 +368,6 @@ def getSPRules(msxhost, spgrpsFile=None,sprulesFile=None):
     return ruleslist
 
 def getSPRulesBreak(msxhost, spgrpsFile=None,sprulesFile=None, spname=None):
-##    spgrpsFile = r"C:\work\emerson\10.40.17.31_spgrps_Apr_27_17_32_02.txt"
     # sprulesFile = f"{nsxhostname}_rules_{filetime}.txt"
     ruleslist = []
     prefix = 'cas-'
